@@ -64,6 +64,15 @@ class RepositoriesViewController: UIViewController {
 
 extension RepositoriesViewController: RepositoriesView {
   
+  func reloadRepositories(_ repositories: [Repository]) {
+    self.repositories = repositories
+    
+    tableView.reloadData()
+    
+    commonsUI.hideLoading()
+    tableView.pullToRefreshView.stopAnimating()
+  }
+  
   func showEmptyView() {
     repositories = []
     
@@ -77,13 +86,14 @@ extension RepositoriesViewController: RepositoriesView {
     tableView.pullToRefreshView.stopAnimating()
   }
   
-  func reloadRepositories(_ repositories: [Repository]) {
-    self.repositories = repositories
+  func showError(_ error: Error) {
+    let alert = UIAlertController(title: "An error has occured!", message: error.localizedDescription, preferredStyle: .alert)
+    let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+      alert.dismiss(animated: true, completion: nil)
+    })
+    alert.addAction(ok)
     
-    tableView.reloadData()
-    
-    commonsUI.hideLoading()
-    tableView.pullToRefreshView.stopAnimating()
+    present(alert, animated: true, completion: nil)
   }
   
 }

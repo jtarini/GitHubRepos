@@ -12,8 +12,9 @@ protocol RepositoriesView: class {
   
   var presenter: RepositoriesPresenter! { get set }
   
-  func showEmptyView()
   func reloadRepositories(_ repositories: [Repository])
+  func showEmptyView()
+  func showError(_ error: Error)
   
 }
 

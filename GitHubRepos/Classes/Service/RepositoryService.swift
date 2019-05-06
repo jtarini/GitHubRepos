@@ -11,25 +11,11 @@ import Moya_ObjectMapper
 
 class RepositoryService {
 
-  typealias GetRepositoriesCompletionHandler = ([Repository]?) -> Void
+  typealias GetRepositoriesCompletionHandler = Single<[Repository]>
   
-  let disposeBag = DisposeBag()
-  
-  func getRepositories(completionHandler: @escaping GetRepositoriesCompletionHandler) {
-    let username = "mikermcneil"
-    moyaProvider.rx.request(.userRepositories(username))
+  func getRepositories(_ username: String) -> GetRepositoriesCompletionHandler {
+    return moyaProvider.rx.request(.userRepositories(username))
       .mapArray(Repository.self)
-      .subscribe { event -> Void in
-        switch event {
-          case .success(let repositories):
-            completionHandler(repositories)
-            break
-          case .error(let error):
-            print(error)
-            completionHandler([Repository]())
-          break
-        }
-      }.disposed(by: disposeBag)
   }
   
 }
