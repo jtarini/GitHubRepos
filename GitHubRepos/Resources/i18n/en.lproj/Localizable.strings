@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  jtarini
+
+  Created by Juliano Tarini on 23/04/19.
+  Copyright © 2019 jtarini. All rights reserved.
+*/
+
+"repositories" = "Repositories";
+"empty.repositories.message" = "No repositories found!";
+"Loading..." = "Loading...";
+"Pull to refresh..." = "Pull to refresh";
+"Release to refresh..." = "Release to refresh";

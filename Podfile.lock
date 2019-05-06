@@ -1,0 +1,83 @@
+PODS:
+  - Alamofire (4.8.1)
+  - DZNEmptyDataSet (1.8.1)
+  - Moya (12.0.1):
+    - Moya/Core (= 12.0.1)
+  - Moya-ObjectMapper/Core (2.8):
+    - Moya (~> 12.0)
+    - ObjectMapper (~> 3.4)
+  - Moya-ObjectMapper/RxSwift (2.8):
+    - Moya-ObjectMapper/Core
+    - Moya/RxSwift
+    - RxSwift (~> 4)
+  - Moya/Core (12.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.0)
+  - Moya/RxSwift (12.0.1):
+    - Moya/Core
+    - RxSwift (~> 4.0)
+  - ObjectMapper (3.4.2)
+  - Result (4.1.0)
+  - RxAtomic (4.4.1)
+  - RxSwift (4.4.1):
+    - RxAtomic (~> 4.4)
+  - SVProgressHUD (2.2.5)
+  - SVPullToRefresh (0.4.1)
+  - Swinject (2.6.0)
+  - SwinjectStoryboard (2.2.0):
+    - Swinject (~> 2.6)
+
+DEPENDENCIES:
+  - DZNEmptyDataSet
+  - Moya-ObjectMapper/RxSwift
+  - SVProgressHUD
+  - SVPullToRefresh
+  - Swinject (from `https://github.com/Swinject/Swinject.git`, branch `master`)
+  - SwinjectStoryboard (from `https://github.com/Swinject/SwinjectStoryboard.git`, branch `master`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - DZNEmptyDataSet
+    - Moya
+    - Moya-ObjectMapper
+    - ObjectMapper
+    - Result
+    - RxAtomic
+    - RxSwift
+    - SVProgressHUD
+    - SVPullToRefresh
+
+EXTERNAL SOURCES:
+  Swinject:
+    :branch: master
+    :git: https://github.com/Swinject/Swinject.git
+  SwinjectStoryboard:
+    :branch: master
+    :git: https://github.com/Swinject/SwinjectStoryboard.git
+
+CHECKOUT OPTIONS:
+  Swinject:
+    :commit: f4cb5ac942dd8eb7f187e59b8528dec904312495
+    :git: https://github.com/Swinject/Swinject.git
+  SwinjectStoryboard:
+    :commit: e687b47f1a3469a9a0747fe570d30ea48ff6d10d
+    :git: https://github.com/Swinject/SwinjectStoryboard.git
+
+SPEC CHECKSUMS:
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
+  Moya-ObjectMapper: c514b5eafcfd5e260f85f7a5bf66895a217e2b37
+  ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  RxAtomic: f8d6adc1ccb87a767811269e4875887bc74dbf19
+  RxSwift: 92fcf68dfef21f3e2ab1965363d9e7b3d787597e
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SVPullToRefresh: ba2e718695a43253d8bea6852d2960097dc15d8c
+  Swinject: 48a96cda93633cf2860697b4ce76ab5db9ebaca2
+  SwinjectStoryboard: 32512ef16c2b0ff5b8f823b23539c4a50f6d3383
+
+PODFILE CHECKSUM: 63a3a533fe352726e3c382319751c3b1c67a42ae
+
+COCOAPODS: 1.6.1
