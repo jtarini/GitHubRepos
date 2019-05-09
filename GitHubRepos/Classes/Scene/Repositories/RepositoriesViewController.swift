@@ -101,11 +101,11 @@ extension RepositoriesViewController: RepositoriesView {
 extension RepositoriesViewController: UITableViewDataSource, UITableViewDelegate {
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    if repositories != nil {
-      return repositories.count
+    guard let items = repositories else {
+      return 0
     }
     
-    return 0
+    return items.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
