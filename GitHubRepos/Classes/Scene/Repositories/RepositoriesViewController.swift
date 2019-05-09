@@ -16,11 +16,11 @@ class RepositoriesViewController: UIViewController {
   
   @IBOutlet weak var tableView: UITableView!
   
-  // MARK: - Internal Attributes
+  // MARK: - Public and internal attributes
   
   var presenter: RepositoriesPresenter!
   var commonsUI: CommonsUI!
-  var repositories: [Repository]!
+  private var repositories: [Repository]!
   
   // MARK: - Lifecycle
   

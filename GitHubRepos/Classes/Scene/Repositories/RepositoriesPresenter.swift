@@ -13,27 +13,24 @@ class RepositoriesPresenterImplementation: RepositoriesPresenter {
   var view: RepositoriesView!
   var service: RepositoryService!
   
-  fileprivate let disposeBag = DisposeBag()
+  private let disposeBag = DisposeBag()
   
   func fetchData() {
     let username = "jtarini"
     service.getRepositories(username)
-      .asObservable()
       .subscribe { event in
         switch event {
-          case .next(let repositories):
+          case .success(let repositories):
             if !repositories.isEmpty {
               self.view.reloadRepositories(repositories)
             }
             else {
               self.view.showEmptyView()
-          }
+            }
           case .error(let error):
             self.view.showError(error)
             self.view.showEmptyView()
-          case .completed:
-            break
-        }
+          }
       }
       .disposed(by: disposeBag)
   }
