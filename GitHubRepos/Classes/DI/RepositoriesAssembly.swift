@@ -14,7 +14,6 @@ class RepositoriesAssembly: Assembly {
   func assemble(container: Container) {
     container.storyboardInitCompleted(RepositoriesViewController.self) { r, c in
       c.presenter = r.resolve(RepositoriesPresenter.self)
-      c.commonsUI = r.resolve(CommonsUI.self)
       c.presenter.view = c
     }
     
@@ -26,9 +25,6 @@ class RepositoriesAssembly: Assembly {
       .inObjectScope(.container)
     
     container.register(RepositoryService.self) {_ in RepositoryService() }
-      .inObjectScope(.container)
-    
-    container.register(CommonsUI.self) { _ in CommonsUI() }
       .inObjectScope(.container)
   }
   

@@ -16,7 +16,8 @@ class RepositoriesPresenterImplementation: RepositoriesPresenter {
   private let disposeBag = DisposeBag()
   
   func fetchData() {
-    let username = "jtarini"
+    let username = "mikermcneil"
+
     service.getRepositories(username)
       .subscribe { event in
         switch event {

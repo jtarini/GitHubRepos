@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0122730464AFF92D3E30BCD4 /* Pods_GitHubRepos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 368929E9A059DCBEEE4DD7CF /* Pods_GitHubRepos.framework */; };
+		7B2E1FEE2289E9AA00AFBE3B /* RepositoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B2E1FED2289E9AA00AFBE3B /* RepositoryTableViewCell.xib */; };
 		7BEC583322778CA500752031 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BEC583122778CA500752031 /* Assets.xcassets */; };
 		7BEC583622778CED00752031 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BEC583422778CED00752031 /* LaunchScreen.storyboard */; };
 		7BEC583722778CED00752031 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BEC583522778CED00752031 /* Main.storyboard */; };
@@ -22,7 +23,6 @@
 		7BEC585222778E1E00752031 /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEC584E22778E1E00752031 /* RepositoriesViewController.swift */; };
 		7BEC585322778E1E00752031 /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEC584F22778E1E00752031 /* RepositoryTableViewCell.swift */; };
 		7BEC585522778E2700752031 /* RepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEC585422778E2700752031 /* RepositoryService.swift */; };
-		7BEC585722778E2F00752031 /* CommonsUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEC585622778E2F00752031 /* CommonsUI.swift */; };
 		7BEC585922778E3B00752031 /* gt-eesti-pro-display-medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7BEC585822778E3B00752031 /* gt-eesti-pro-display-medium.otf */; };
 		7BEC585C22778E4600752031 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7BEC585A22778E4600752031 /* Localizable.strings */; };
 /* End PBXBuildFile section */
@@ -30,6 +30,7 @@
 /* Begin PBXFileReference section */
 		368929E9A059DCBEEE4DD7CF /* Pods_GitHubRepos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHubRepos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		587F7513E594FA18181AF046 /* Pods-GitHubRepos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubRepos.release.xcconfig"; path = "Target Support Files/Pods-GitHubRepos/Pods-GitHubRepos.release.xcconfig"; sourceTree = "<group>"; };
+		7B2E1FED2289E9AA00AFBE3B /* RepositoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryTableViewCell.xib; sourceTree = "<group>"; };
 		7BE08668227789E5008E9136 /* GitHubRepos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubRepos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BEC583022778CA500752031 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BEC583122778CA500752031 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -46,7 +47,6 @@
 		7BEC584E22778E1E00752031 /* RepositoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoriesViewController.swift; sourceTree = "<group>"; };
 		7BEC584F22778E1E00752031 /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
 		7BEC585422778E2700752031 /* RepositoryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryService.swift; sourceTree = "<group>"; };
-		7BEC585622778E2F00752031 /* CommonsUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonsUI.swift; sourceTree = "<group>"; };
 		7BEC585822778E3B00752031 /* gt-eesti-pro-display-medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gt-eesti-pro-display-medium.otf"; sourceTree = "<group>"; };
 		7BEC585B22778E4600752031 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F867AC3766B634A2307DCD91 /* Pods-GitHubRepos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubRepos.debug.xcconfig"; path = "Target Support Files/Pods-GitHubRepos/Pods-GitHubRepos.debug.xcconfig"; sourceTree = "<group>"; };
@@ -64,6 +64,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B2E1FEF2289F4C100AFBE3B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				7BEC583422778CED00752031 /* LaunchScreen.storyboard */,
+				7BEC583522778CED00752031 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		7B2E1FF02289F4F600AFBE3B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7B2E1FED2289E9AA00AFBE3B /* RepositoryTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		7BE0865F227789E5008E9136 = {
 			isa = PBXGroup;
 			children = (
@@ -106,8 +123,8 @@
 		7BE0868522778ADC008E9136 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7BEC583422778CED00752031 /* LaunchScreen.storyboard */,
-				7BEC583522778CED00752031 /* Main.storyboard */,
+				7B2E1FF02289F4F600AFBE3B /* Cells */,
+				7B2E1FEF2289F4C100AFBE3B /* Storyboards */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -121,7 +138,6 @@
 				7BEC583D22778D4500752031 /* Networking */,
 				7BEC583E22778D5300752031 /* Scene */,
 				7BEC583F22778D6600752031 /* Service */,
-				7BEC584022778D7C00752031 /* Util */,
 				7BEC583822778D1000752031 /* AppDelegate.swift */,
 			);
 			path = Classes;
@@ -190,14 +206,6 @@
 				7BEC585422778E2700752031 /* RepositoryService.swift */,
 			);
 			path = Service;
-			sourceTree = "<group>";
-		};
-		7BEC584022778D7C00752031 /* Util */ = {
-			isa = PBXGroup;
-			children = (
-				7BEC585622778E2F00752031 /* CommonsUI.swift */,
-			);
-			path = Util;
 			sourceTree = "<group>";
 		};
 		7BEC584122778DC000752031 /* Repositories */ = {
@@ -292,6 +300,7 @@
 				7BEC583622778CED00752031 /* LaunchScreen.storyboard in Resources */,
 				7BEC585C22778E4600752031 /* Localizable.strings in Resources */,
 				7BEC583322778CA500752031 /* Assets.xcassets in Resources */,
+				7B2E1FEE2289E9AA00AFBE3B /* RepositoryTableViewCell.xib in Resources */,
 				7BEC585922778E3B00752031 /* gt-eesti-pro-display-medium.otf in Resources */,
 				7BEC583722778CED00752031 /* Main.storyboard in Resources */,
 			);
@@ -310,6 +319,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-GitHubRepos/Pods-GitHubRepos-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityIndicator/AlamofireNetworkActivityIndicator.framework",
 				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya-ObjectMapper/Moya_ObjectMapper.framework",
@@ -317,8 +327,8 @@
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SVPullToRefresh/SVPullToRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
 			);
@@ -327,6 +337,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityIndicator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ObjectMapper.framework",
@@ -334,8 +345,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVPullToRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkeletonView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectStoryboard.framework",
 			);
@@ -377,7 +388,6 @@
 				7BEC585522778E2700752031 /* RepositoryService.swift in Sources */,
 				7BEC583922778D1000752031 /* AppDelegate.swift in Sources */,
 				7BEC584B22778E1400752031 /* GitHubAPI.swift in Sources */,
-				7BEC585722778E2F00752031 /* CommonsUI.swift in Sources */,
 				7BEC585322778E1E00752031 /* RepositoryTableViewCell.swift in Sources */,
 				7BEC584822778E0B00752031 /* Owner.swift in Sources */,
 				7BEC585222778E1E00752031 /* RepositoriesViewController.swift in Sources */,

@@ -9,6 +9,7 @@
 import UIKit
 import SVPullToRefresh
 import DZNEmptyDataSet
+import SkeletonView
 
 class RepositoriesViewController: UIViewController {
 
@@ -19,7 +20,6 @@ class RepositoriesViewController: UIViewController {
   // MARK: - Public and internal attributes
   
   var presenter: RepositoriesPresenter!
-  var commonsUI: CommonsUI!
   private var repositories: [Repository]!
   
   // MARK: - Lifecycle
@@ -40,6 +40,7 @@ class RepositoriesViewController: UIViewController {
   fileprivate func initializeView() {
     navigationController?.navigationBar.topItem?.title = NSLocalizedString("repositories", value: "", comment: "")
     
+    tableView.register(UINib(nibName: "RepositoryTableViewCell", bundle: nil), forCellReuseIdentifier: "RepositoryTableViewCell")
     tableView.tableFooterView = UIView(frame: CGRect.zero)
     tableView.cellLayoutMarginsFollowReadableWidth = false
     
@@ -55,8 +56,6 @@ class RepositoriesViewController: UIViewController {
    Fetch repositories data.
   */
   fileprivate func fetchRepositories() {
-    commonsUI.showLoading()
-    
     presenter.fetchData()
   }
   
@@ -68,8 +67,7 @@ extension RepositoriesViewController: RepositoriesView {
     self.repositories = repositories
     
     tableView.reloadData()
-    
-    commonsUI.hideLoading()
+
     tableView.pullToRefreshView.stopAnimating()
   }
   
@@ -81,8 +79,7 @@ extension RepositoriesViewController: RepositoriesView {
     tableView.emptyDataSetDelegate = self
     
     tableView.reloadData()
-    
-    commonsUI.hideLoading()
+
     tableView.pullToRefreshView.stopAnimating()
   }
   
@@ -98,11 +95,11 @@ extension RepositoriesViewController: RepositoriesView {
   
 }
   
-extension RepositoriesViewController: UITableViewDataSource, UITableViewDelegate {
+extension RepositoriesViewController: SkeletonTableViewDataSource {
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     guard let items = repositories else {
-      return 0
+      return 14
     }
     
     return items.count
@@ -111,11 +108,20 @@ extension RepositoriesViewController: UITableViewDataSource, UITableViewDelegate
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "RepositoryTableViewCell") as! RepositoryTableViewCell
     
-    let repository = repositories[indexPath.row]
+    guard let items = repositories else {
+      return cell
+    }
     
+    cell.hideSkeleton()
+    
+    let repository = items[indexPath.row]
     cell.name.text = repository.name
     
     return cell
+  }
+  
+  func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
+    return "RepositoryTableViewCell"
   }
   
 }

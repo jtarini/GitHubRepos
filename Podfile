@@ -10,5 +10,6 @@ target 'GitHubRepos' do
   pod 'SwinjectStoryboard', :git => 'https://github.com/Swinject/SwinjectStoryboard.git', :branch => 'master'
   pod 'DZNEmptyDataSet'
   pod 'SVPullToRefresh'
-  pod 'SVProgressHUD'
+  pod 'AlamofireNetworkActivityIndicator'
+  pod 'SkeletonView'
 end
