@@ -11,3 +11,5 @@
 "Loading..." = "Loading...";
 "Pull to refresh..." = "Pull to refresh";
 "Release to refresh..." = "Release to refresh";
+"general.error.message.title" = "An error has occured!";
+"ok" = "Ok";

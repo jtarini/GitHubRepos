@@ -84,8 +84,8 @@ extension RepositoriesViewController: RepositoriesView {
   }
   
   func showError(_ error: Error) {
-    let alert = UIAlertController(title: "An error has occured!", message: error.localizedDescription, preferredStyle: .alert)
-    let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+    let alert = UIAlertController(title: NSLocalizedString("general.error.message.title", value: "", comment: ""), message: error.localizedDescription, preferredStyle: .alert)
+    let ok = UIAlertAction(title: NSLocalizedString("ok", value: "", comment: ""), style: .default, handler: { (action) -> Void in
       alert.dismiss(animated: true, completion: nil)
     })
     alert.addAction(ok)
